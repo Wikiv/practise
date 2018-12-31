@@ -1,0 +1,2 @@
+1.2.2
+	* Fixed memory leak while iterating attributes.

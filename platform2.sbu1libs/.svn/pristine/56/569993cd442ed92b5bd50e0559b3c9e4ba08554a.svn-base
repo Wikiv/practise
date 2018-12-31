@@ -1,0 +1,7 @@
+
+logging:
+  dir: /tmp
+  mode: 1
+  filename: test_slog.log
+  level: 2
+

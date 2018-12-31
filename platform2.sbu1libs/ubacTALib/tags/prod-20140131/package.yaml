@@ -1,0 +1,19 @@
+package_name: ubacTALib
+version: 1.0.0
+
+dependencies:
+    - name: ubacUtils
+      version: 1.0.0
+    - name: ubacSSLInterface
+      version: 1.0.0
+    - name: ubacIPC
+      version: 1.0.0
+    - name: ubacYAML
+      version: 1.0.0
+    - name: ubacLogger
+      version: 1.0.0
+    - name: ubacHTTPClient
+      version: 1.0.0
+    - name: ubacJSONParser
+      version: 1.0.0
+external_dependencies: libyajl-dev,libcrypto++-dev,libpthread-stubs0-dev,libcurl3-dev,libyaml-dev

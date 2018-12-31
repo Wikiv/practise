@@ -1,0 +1,81 @@
+v1.7.1 Date: 15-10-2018
+	* Changed Master worker model to distribute load across workers.
+	* Add registerPushServer function in WorkerHandler for applications to register
+	the pushServer.
+	* Add SBU2StreamingRequest_MAXSUBSYMS in SBU2StreamingRequest.
+
+v1.6.9
+	* [ADD] Callback for initial and empty session
+
+v1.6.8
+	* [FIX] monitor function - assigning reuturn value of vector.erase() function to the iterator 
+	* Invalidate the request if no. of subscribed symbols > 100
+
+v1.6.7
+	* Added logging
+	* Fixed issue in master-worker during multiple childs get crashed simultaneously.
+
+v1.6.1
+	* Added Previous Close in QuotePacket
+
+v1.6.0
+	* Added sendToAllSessions in PushServer
+
+v1.5.9
+	* Added FutPrice and PremiumDiscount in QuotePacket
+
+v1.5.8
+	* Added spotPrice in QuotePacket
+
+v1.5.7
+	* Update TLSPushServer for adding keyPassPhrase
+
+v1.5.6
+	* Added callback onPushClientClose, onPushClientSessionChange in IFSubscriptions
+	* Added method in SBU2Pushclient to get session
+
+v1.5.5
+	* Added client in all virtual functions for subscriptions
+
+v1.5.4
+	* Added setProgName in MasterPushServer; which will append "-W" for worker
+	and "-M" for Master to process name.
+
+v.1.5.2 
+	* [fix] unsubscribe - alert,accountUpdate - client close
+
+v.1.5.1
+	* Added __attribute__((packed)) to QuotePacket
+
+v1.4.9
+	* Added namespace SBU2PUSH
+
+v1.4.8 Date: 18-11-2014
+	* Added prctl(PR_SET_PDEATHSIG
+
+v.1.4.7 Date:29-09-2014
+	* Added MasterPushServer and WorkerHandler
+
+v1.4.6 Date: 20-07-2014, 21-08-2014
+	* Added WebSocketPushSever
+Added virtual fucntion to handle quote through streaming to send the last updated packet
+
+V1.4.4 Date: 02-07-2014
+	* Adding account update streaming type
+
+v1.4.4 Date: 24-06-2014
+	* removeFromTables() is added with lock and directly deleting existing conn
+object for a session
+
+v1.4.3 Date: 12-06-2014
+	* Delete SBU2TLSClient when SSL Accept unsucessful
+
+Date: 24-05-2014
+	* Fix in closeSession to avaoid deadlock
+
+Date: 10-04-2014
+	* Added send method for just Json response and sendtoSession method without request type
+
+Date: 20-02-2014
+	* Adding only valid TLS connection in Fax.
+

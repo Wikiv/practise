@@ -1,0 +1,10 @@
+package_name: ubacIPC
+version: 1.0.0
+
+dependencies:
+    - name: ubacUtils
+      version: 1.0.0
+    - name: ubacSSLInterface
+      version: 1.0.0
+external_dependencies: libcrypto++-dev,libpthread-stubs0-dev
+

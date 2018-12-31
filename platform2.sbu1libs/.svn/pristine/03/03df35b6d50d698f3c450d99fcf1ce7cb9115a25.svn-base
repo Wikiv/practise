@@ -1,0 +1,24 @@
+                                        LIBRARY NAME: ubacUtils
+                                        =======================
+
+Description: ubacUtils is collection of small utility functions which is used across most of the libraries and components.
+	         Broadly used for Base64 encoding, Exceptions class, GetOption, IFHelper, Intraday and Json Formation(only used with watchlist)
+
+Dependencies: None
+
+Installation:
+	      make
+	      sudo make install
+
+Tested for:
+        1) Ubuntu 12.04.3 LTS gcc version 4.6.3
+	    2)
+	    3)
+
+How to use:
+	    1) Install all dependencies
+	    2) install ubacUtils
+        3) go to "test" and run the test files
+
+Support:
+	   For any bugs, optimization, enhancement or installation support, contact at pf-integration-groups@inxsasia.com

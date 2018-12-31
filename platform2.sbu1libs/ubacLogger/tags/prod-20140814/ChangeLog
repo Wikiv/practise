@@ -1,0 +1,8 @@
+1.2.0 --> 1.2.1 23rd June 2014
+
+-- Added fix for va_list to print more then 5MB of data
+
+1.0.0
+-----
+
+[change] added pid in the log

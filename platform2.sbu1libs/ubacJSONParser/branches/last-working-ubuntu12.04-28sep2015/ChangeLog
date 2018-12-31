@@ -1,0 +1,29 @@
+25th May 2015
+-------------
+- fixing empty objects in json array and json map
+
+26th Nov 2014
+-------------
+- Handling special charactors.
+
+2nd Jule 2014
+=============
+
+- Operator []= optimized.
+
+Add here ----
+
+27 feb 2014
+===========
+
+- clearAll() function 
+- constructors for double const char*
+
+26 dec 2013
+===========
+- Added getJsonObject function
+- throw exception if object not found in above
+
+23 dec 2013
+===========
+- Fix for isValidJson

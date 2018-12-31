@@ -1,0 +1,13 @@
+1.3.5
+	* Connection leak issue fix when Database switch fails.
+
+1.3.0 
+	* Handle failover 
+	* Added connection timeout.
+
+1.2.9
+	* Mutex lock issue fixed
+
+1.0.0 
+	* Initial version of ubacmssql added taken from existing libubac. (03-10-2013)
+

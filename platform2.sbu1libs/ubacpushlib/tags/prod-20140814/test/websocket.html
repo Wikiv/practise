@@ -1,0 +1,60 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <script type="text/javascript">
+
+  window.onload = function() {
+
+            function WebSocketTest()
+{
+    if ("WebSocket" in window)
+    {
+        //		alert("WebSocket is supported by your Browser!");
+        // Let us open a web socket
+        var ws = new WebSocket("ws://localhost:11001");
+
+        ws.onopen = function()
+        {
+            // Web Socket is connected, send data using send()
+            var request = '{"request":{"data":{"symbols":[{"symbol":"AALI"},{"symbol":"BUMI"},{"symbol":"HADE"},{"symbol":"JKON"},{"symbol":"KRAS"},{"symbol":"MDRN"}]},"streaming_type":"quote","request_type":"subscribe","response_format":"json"}}\n';
+
+            ws.send(request);
+        };
+
+	var sender  = document.getElementById("sender");
+
+        ws.onmessage = function (evt) 
+        { 
+            var received_msg = evt.data;
+	    sender.innerHTML = '<br/><span>'+received_msg+'</span>' + sender.innerHTML;
+//            alert("Message is received.." + sender);
+	    
+        };
+        ws.onclose = function()
+        { 
+            // websocket is closed.
+            //			alert("Connection is closed..."); 
+        };
+    }
+    else
+    {
+        // The browser doesn't support WebSocket
+        alert("WebSocket NOT supported by your Browser!");
+    }
+}
+
+//document.getElementById("demo").innerHTML = WebSocketTest();
+
+WebSocketTest();
+
+}
+
+</script>
+</head>
+<body>
+
+	<div id='sender'>
+
+</div>
+</body>
+</html>

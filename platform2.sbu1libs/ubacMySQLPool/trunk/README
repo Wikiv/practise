@@ -1,0 +1,6 @@
+g++ test/testConnection.cpp src/* -I include -l:libmysqlcppconn.so
+
+install:
+
+mysql-connector-c++-1.1.6 -- Install it from source or Market simplified Respository
+  -- https://dev.mysql.com/downloads/connector/cpp/1.1.html

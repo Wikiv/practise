@@ -1,0 +1,14 @@
+1.0.4
+	* Removed dynamic exception specifications
+
+1.0.3
+	* Added OPT_RECONNECT for handling wait_timeout.
+
+1.0.2
+	* Fixed connecion Leaking.
+
+1.0.1
+	* Fix added to handle default sql connection timeout
+
+1.0.0
+	* Initial version

@@ -1,0 +1,4 @@
+svn-url : https://subversion.assembla.com/svn/platform2.sbu1libs/ubacIPC/branches/ubacipc-revolutionized
+URL:
+svn-revision : 
+pkg-version : 1.3.9

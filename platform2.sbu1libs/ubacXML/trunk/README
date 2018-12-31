@@ -1,0 +1,26 @@
+                                        LIBRARY NAME: LIBUBACXML
+                                        ========================
+
+Description: libubacxml is written on top of libxml2 which implements a way to parse XML files, by setting callback functions to handle elements in each node.
+	     For more info, refer include/XmlParser.h file.
+
+Dependencies: libxml2-dev (sudo apt-get install libxml2-dev)
+
+Installation:
+	      make
+	      sudo make install
+
+Tested for:
+            1) Ubuntu 10.04.3 LTS gcc version 4.4.3
+	    2)
+	    3)
+
+Debain Package: Respective debian package can be found under "debian" folder
+
+How to use:
+	   1) Install all dependencies
+	   2) install libubacxml
+           3) go to "test" and run the test files
+
+Support:
+	   For any bugs, optimization, enhancement or installation support, contact at pf-integration-groups@inxsasia.com

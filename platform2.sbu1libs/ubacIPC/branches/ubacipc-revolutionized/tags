@@ -1,0 +1,21 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+BIN	Makefile	/^BIN = bin$/;"	m
+CPP	Makefile	/^CPP = g++$/;"	m
+CPPFLAGS	Makefile	/^CPPFLAGS = -g --shared -Wall -fstack-protector-all -Wstack-protector -fno-defer-pop -Wformat -Wformat-security -fexceptions -finline-functions -fPIC -O2 $/;"	m
+DEB_PKG_DEPENDS	Makefile	/^DEB_PKG_DEPENDS=$/;"	m
+INCLUDE	Makefile	/^INCLUDE = -I .\/include\/$/;"	m
+LDFLAGS	Makefile	/^LDFLAGS=-L\/usr\/local\/lib$/;"	m
+LIBS	Makefile	/^LIBS = -lpthread -lssl -l:libubacutils.so.1.2.4 -l:libubacsslinterface.so.1.2.4$/;"	m
+OBJ	Makefile	/^OBJ = $(BIN)\/$(OBJ_NAME)$/;"	m
+OBJ_NAME	Makefile	/^OBJ_NAME = $(PKG_NAME).so.$(PKG_VERSION)$/;"	m
+PKG_NAME	Makefile	/^PKG_NAME=libubacipc$/;"	m
+PKG_VERSION	Makefile	/^PKG_VERSION=1.3.5$/;"	m
+RPM_PKG_DEPENDS	Makefile	/^RPM_PKG_DEPENDS=$/;"	m
+SRC	Makefile	/^SRC = src\/*$/;"	m
+UBAC_PKG_DEPENDS	Makefile	/^UBAC_PKG_DEPENDS=libubacutils-1.2.4,libubacsslinterface-1.2.4$/;"	m
+install_include_dir	Makefile	/^install_include_dir = \/usr\/local\/include\/ubacipc\/$/;"	m

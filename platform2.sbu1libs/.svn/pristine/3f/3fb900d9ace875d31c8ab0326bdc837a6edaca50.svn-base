@@ -1,0 +1,13 @@
+http_server:
+  port: 30002
+  force_https: false # true
+
+legacyapp: false
+
+logging:
+  dir: /tmp
+  require_log_folder: true
+  mode: 1
+  level: 2
+  filename: currenex.log
+  namespace: currenex

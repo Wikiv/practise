@@ -1,0 +1,11 @@
+1.2.5
+	* Use of snprintf instead of sprintf
+
+1.2.4
+	* gsub using string::find and string::replace.
+
+1.2.3
+	* Fixed issue in split. Also changed input string as reference. 
+
+1.2.1 
+	* Exposed API in Intraday.

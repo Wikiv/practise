@@ -1,0 +1,7 @@
+package_name: ubacJSONParser
+version: 1.0.0
+
+dependencies:
+    - name: ubacUtils
+      version: 1.0.0
+external_dependencies: libyajl-dev

@@ -1,0 +1,10 @@
+Introduction: This is main directory for all sbu1 libraries.
+
+To Install all libraries, use install.sh script under sbu1libs root folder
+
+
+NOTE: Please use this only for DEV enviorments. Later avoid this for any servers.
+
+TODO:// Create a tree listing individual dependencies for each library separately.
+     // To be done by KK, Kantha or Kathi
+

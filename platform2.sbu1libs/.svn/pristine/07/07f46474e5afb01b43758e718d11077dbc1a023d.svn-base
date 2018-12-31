@@ -1,0 +1,15 @@
+
+DEBIANS:
+---------
+There are 2 debian packages maintained for libcurl. One for Redhat6 and one for ubuntu.
+
+Redhat6 is used for Maybank, so it requires redhat6_curl_7.21.7-3ubuntu1.debian.tar.gz version of curl to be installed.
+
+For Ubuntu: sudo apt-get install libcurl4-openssl-dev
+
+
+Tested for:
+        1) Ubuntu 10.04.3 LTS gcc version 4.4.3
+        2)
+        3)
+

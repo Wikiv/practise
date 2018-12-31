@@ -1,0 +1,10 @@
+package_name: SBU2WebApplication
+version: 1.0.0
+
+dependencies:
+    - name: ubacJSONParser
+      version: 1.0.0
+    - name: ubacSSLInterface
+      version: 1.0.0
+    - name: ubacHTTPClient
+      version: 1.0.0

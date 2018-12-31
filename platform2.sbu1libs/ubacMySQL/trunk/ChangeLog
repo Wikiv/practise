@@ -1,0 +1,5 @@
+1.2.2
+	* Updated Makefile
+
+03-10-2013
+	* Initial version of ubacmysql added taken from existing libubac. 

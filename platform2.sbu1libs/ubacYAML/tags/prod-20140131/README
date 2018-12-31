@@ -1,0 +1,8 @@
+                                        LIBRARY NAME: LIBUBACYAML
+                                        =========================
+
+Description: libubacyaml is written on top of libyaml-dev which implements a way to parse yaml files for configuration.
+
+Dependencies: libyaml-dev (sudo apt-get install libyaml-dev)
+
+Installation: make

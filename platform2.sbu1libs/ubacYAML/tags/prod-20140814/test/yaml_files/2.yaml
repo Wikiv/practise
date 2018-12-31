@@ -1,0 +1,11 @@
+debug:
+  mode: 1
+  dir: /home/kundankrishna/Clogger/DebugLog
+  file_name: logger_debug.log
+  level: 1
+
+logging:
+  dir: /home/kundankrishna/Clogger/Log
+
+clog_server:
+  port: 5679

@@ -1,0 +1,49 @@
+v1.4.8:
+	* Changed MasterWorker model with httpServer initializing each worker.
+
+v1.3.9:
+	* Added setter methods for msfRequest & msfResponse in AuditObject class
+	* MessageId generated based on RequestURL in addition to content and time.
+	* Fixed issue in master-worker during multiple childs get crashed simultaneously
+
+v1.3.8:
+	* Added empty constructor for SBU2WebService
+
+v1.3.5:
+	* Disabling url decoding
+	* Removing mobile_request parsing
+
+v1.3.3:
+	* Added check before pulling request and appID in MSFRequest, to avoid
+	JsonObject `hole`
+	* Changed all variables in MSFRequest to protected for giving better
+	control to inherited classes
+	* Removed unwanted variables in SBU2WebService
+	* Added onRawRequest and onInvalidJSONRequest virtual methods in SBU2WebService
+	* Added onServiceNotFound in MasterHTTPListener
+
+v1.3.1
+	* Added the return of EventFax and SBU2HTTPServer; This will be required
+	to delete the objects created in same thread.
+
+v.1.3.0
+	* Added setProgName in MasterPushServer; which will append "-W" for 
+	worker and "-M" for Master to process name.
+
+v1.2.4 Date: 10-07-2014
+	* Added addToData to add directly JsonObject in data.
+	* Removed unbind method from HTTPConnection, because this can lead into
+		SEGMENTATION FAULT if all Actor threads are busy and any connection closed;
+	* Added sendResponse in SBU2WebService to set headers for msfresponse.
+	* Changed SBU2HTTPServer compactible to HTTPServer in UBACIPC;
+	* Added AppLoader (30-07-2014)
+	* Added AuditObject and AuditTrans
+	* Removed unwanted code and comments, logging in SBU2Webservice.
+	* Added HTTPServerRequest reference in MSFRequest.
+
+v1.2.2 Date: 24-06-2014
+	* Fixed crash when concurrent connections are there.
+
+v1.2.1 Date: 12-06-2014
+	* Incremented version to accomodate ubacIPC 1.2.2 version
+

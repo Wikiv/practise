@@ -1,0 +1,27 @@
+1.4.2:
+	* [Harikrishnan R][09-09-2018] Added file rotation based on hour.
+
+1.4.0:
+	* Fixed stalling of file write issue. 
+
+1.3.7:
+	* Fixed issue while shifting the file. Added File exists check before
+	renaming the file.
+
+1.3.2:
+	* Added Checking for debug level before making message
+	* For better performance malloc is using instead of calloc.
+
+1.2.9
+	* Closing file descriptor only for local logging and for live, deleting
+	tcp client
+
+1.2.8
+	* Closing the file descriptor
+
+1.2.2
+	* Library update  ubacIPC
+
+
+1.2.0 --> 1.2.1 
+	* Added fix for va_list to print more then 5MB of data

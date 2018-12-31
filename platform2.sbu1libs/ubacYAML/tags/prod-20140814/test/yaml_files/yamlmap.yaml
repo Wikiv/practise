@@ -1,0 +1,11 @@
+prod:
+  webservice_url: mobilews.patsystems.com
+  webservice_port: "-"
+  streamer_ip: "gw1-streamer.patsystems.com"
+  streamer_port: 12001
+
+uat:
+  webservice_url: "pats.apac-beta.marketsimplified.com"
+  webservice_port: "-"
+  streamer_ip: 10.128.71.100
+  streamer_port: 12001

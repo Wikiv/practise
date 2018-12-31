@@ -1,0 +1,22 @@
+                                            LIBRARY NAME: ubacMonitor
+                                            =========================
+
+Dependencies: libubacipc, libubacjsonparser.
+
+Installation:
+    make
+    sudo make install
+
+Tested for:
+    1) Ubuntu 14.04.1 LTS gcc version 4.8.4
+    
+    
+
+How to use:
+    1) Install all dependencies
+    2) install ubacIPC , libubacjsonparser
+    3) go to "test" and run the test files
+
+Support:
+    For any bugs, optimization, enhancement or installation support, contact at pf-integration-groups@inxsasia.com
+

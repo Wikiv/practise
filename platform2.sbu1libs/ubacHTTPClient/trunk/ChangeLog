@@ -1,0 +1,23 @@
+1.4.4
+	* [FIX] removed dynamic exception specifications
+
+1.3.8
+	* [FIX] - Memory Leak in HTTPS Calls. Changed libcurl-nss to
+	libcurl-openssl in Makefile.
+	* [ADD] Wrapper methods in HTTPSRequest class for enable and disable verifypeer
+	and verifyhost.
+
+1.3.4
+	* Removed curl_multi_add_handle in HTTPRequest to avoid "easy handled
+	already used in multi handle" error.
+
+1.2.3
+	* Makefile update.
+
+0.0.2
+-----
+* url_encode and decode as static functions.
+
+0.0.1
+-----
+* handled multiple threads issue in httpclient

@@ -1,0 +1,10 @@
+1.0.1
+-----
+* [add] init-provision to set data unencoded
+
+1.0.0
+-----
+[change] sync with libubac - 2.4.7
+* [fix] init request case insensitive
+* [add] fields for conditional orders
+* [add] market next order type

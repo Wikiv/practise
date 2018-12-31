@@ -1,0 +1,29 @@
+1.2.5 2014/07/20
+* Added WebSocketClient, HTTPServer, HTTPConnection.
+* Added asyncSendData for TLSClient (2014/07/30)
+
+1.2.3 date 2014/06/18
+* Removing Client instance from map using iterator; Not through
+deleteTCPClient in EventFax
+
+
+1.2.2 date 2014/06/11 
+
+*Delete TCP Client before closing the connection
+
+1.2.1 date 2014/06/05
+
+*Adding synchronization for MSFBroadcaster send and create new client function
+
+1.2.0 date 2014/02/20
+
+*Adding fix for ssl accept crash
+
+date: 2013/10/23
+
+* adding buffer
+
+1.0.1 date: 2013/03/01
+
+* Added AsyncSendData
+* Added CircularBuffer to hold data which is not sent.

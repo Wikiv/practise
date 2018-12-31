@@ -1,0 +1,73 @@
+1.4.0:
+	* [FIX] - Issue in Circularbuffer.
+	* [FIX] - Added function to readout all the read-events for the fds, whose recv buffer has data after 10 iterations.
+	* [FIX] - Websocket changes.
+
+1.3.8:
+	* 15-02-2017 Change in Message Queue Class
+
+1.3.7:
+	* Added semaphore and shared memory
+	* Added Message queue
+	* Updated Message Queue with Template and Exception
+	* [FIX] changed array declaration avoid buffer overflow in websocket.
+
+
+1.3.6:
+	* Freeing SSL_Context * and SSL * in the destructor.
+	* Changed desctructor of TLSClient and WebsocketClient to virtual
+
+1.3.5:
+	* [UDPClient] SendData fucntion is changed.
+	* [UDPClient] Connection creation is changed.
+
+1.3.4:
+	* Scoped mutex lock implementation has been added.
+	* [WebSockets] Assigning NULL to frame-data in the WebSocketClient
+
+1.3.3:
+	* [TLSServer] Added TLS v 1.2 support with backward compatibility
+	* [TLSClient] Added TLS v 1.2 support with backward compatibility
+
+1.3.2:
+	* [WebSockets] Changed framing of data while sending data.
+	* [WebSockets] freeing websocket_frame_data while destroying the object
+	* [TLSServer] Added keypasspharse for decrypting private key.
+	* [TLSClient] Removed private_key from constructor.
+
+1.3.0:
+	* Added parsePath Method in HTTPParser
+	* Added queryParams in HTTPServerRequest
+
+1.2.9
+	* Created char buffer in heap only. 
+
+1.2.8
+	* Updated epoll_wait timeout from 1 to 500
+
+1.2.6
+	* Added setEventFax function in HTTPServer class.
+
+1.2.5 2014/07/20
+	* Added WebSocketClient, HTTPServer, HTTPConnection.
+	* Added asyncSendData for TLSClient (2014/07/30)
+
+1.2.3 date 2014/06/18
+	* Removing Client instance from map using iterator; Not through
+deleteTCPClient in EventFax
+
+
+1.2.2 date 2014/06/11 
+	* Delete TCP Client before closing the connection
+
+1.2.1 date 2014/06/05
+	* Adding synchronization for MSFBroadcaster send and create new client function
+
+1.2.0 date 2014/02/20
+	* Adding fix for ssl accept crash
+		date: 2013/10/23
+	* adding buffer
+
+1.0.1 date: 2013/03/01
+	* Added AsyncSendData
+	* Added CircularBuffer to hold data which is not sent.

@@ -1,0 +1,12 @@
+logging:
+  dir: /tmp/oms
+  mode: 1
+  filename: test_slog.log
+  level: 4
+  namespace: oms
+  file_rotation_period: H # D for daily H for Hourly resolution should be a proper divisor of 24. [1, 2, 3, 4, 6, 12]
+  file_rotation_resolution: 2 # Hourly resolution should be a proper divisor of 24. [1, 2, 3, 4, 6, 12]
+
+central_logger:
+  ip: localhost
+  port: 5679

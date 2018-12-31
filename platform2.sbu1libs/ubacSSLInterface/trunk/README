@@ -1,0 +1,34 @@
+                                            LIBRARY NAME: ubacSSLInterface
+                                            =============================
+
+
+
+Dependencies: libssl (sudo apt-get install libssl-dev)
+              ibcrypto (sudo apt-cache search libcrypto)  // Install only if you get error while compiling.
+
+Installation:
+            make
+            sudo make install
+
+Tested for:
+        1) Ubuntu 12.04.3 LTS gcc version 4.6.3
+        2)  
+        3)  
+
+How to use:
+        1) Install all dependencies
+        2) install ubacSSLInterface
+        3) go to "test" and run the test files
+
+Support:
+        For any bugs, optimization, enhancement or installation support, contact at pf-integration-groups@inxsasia.com
+
+
+NOTE:
+=====
+* use lcrpto files. for rectifying the following issue.
+/usr/local/lib/libubacsslinterface++.so: undefined reference to `EVP_des_cfb64'
+/usr/local/lib/libubacsslinterface++.so: undefined reference to `EVP_CipherUpdate'
+/usr/local/lib/libubacsslinterface++.so: undefined reference to `SHA512_Final'
+
+

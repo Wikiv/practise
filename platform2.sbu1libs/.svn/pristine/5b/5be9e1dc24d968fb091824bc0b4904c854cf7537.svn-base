@@ -1,0 +1,14 @@
+1.0.0
+-----
+	* initial import
+
+1.2.1
+-----
+	* Added Memcache Utils
+
+1.2.3
+	* Library update
+
+1.2.7
+	* Added constructor without namespace
+	* Updated makeKey function for handling any keys.
