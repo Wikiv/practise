@@ -29,12 +29,12 @@ Emp(string n,string wm,string s)
 	}
 ~Emp(){}
 };
-void del(int j,map<int,Emp> *map_e)
+void del(int j,map<int,Emp*> map_e)
 	{     	
-			map<int,Emp>::iterator it=map_e->begin();
-		it=map_e->find(j);
-                 map_e->erase(j);
-		cout<<"size aft del"<<map_e->size()<<endl;
+			map<int,Emp*>::iterator it=map_e.begin();
+		it=map_e.find(j);
+                 map_e.erase(j);
+		cout<<"size aft del"<<map_e.size()<<endl;
 
 }
 int main()
@@ -42,8 +42,8 @@ int main()
 	string na,ww,saa;
 	char c;
 	int i=0,choice;
-	map<int,Emp>map_e;
-	Emp *E=new Emp(na,ww,saa);
+	map<int,Emp*>map_e;
+	Emp *E,*D;
 	while(1)
 	{
 	cout<<"1.Insert Id and name"<<endl;
@@ -65,7 +65,7 @@ int main()
 				cin>>i>>na>>ww>>saa;
 				Emp *E=new Emp(na,ww,saa);
 				cout<<"size bef insert"<<map_e.size()<<endl;
-				map_e.insert(pair<int,Emp>(i,*E));
+				map_e.insert(pair<int,Emp*>(i,E));
 				cout<<"size after insert"<<map_e.size()<<endl;
 				cout<<"do u need to insert again[y/n]"<<endl;
 				cin>>c;
@@ -75,29 +75,32 @@ int main()
 			break;
 		case 2:
 			
-			cout<<"enter to modifiy"<<endl;
+			{
+				cout<<"enter to modifiy"<<endl;
 			cin>>i;
-			del(i,&map_e);
+			del(i,map_e);
 			cout<<"enter the id ,name, worktype, salary"<<endl;
                         cin>>i>>na>>ww>>saa;
-			map_e.insert(pair<int,Emp>(i,*E));
+				Emp *D=new Emp(na,ww,saa);
+			map_e.insert(pair<int,Emp*>(i,D));
                        	cout<<"size after insert"<<map_e.size()<<endl;
+			}
 			break;
 
 		case 3:
 			{
 				cout<<"enter the id to delete"<<endl;
 		        cin>>i;
-			map<int,Emp>::iterator it=map_e.begin();
-			del(i,&map_e);
+			map<int,Emp*>::iterator it=map_e.begin();
+			del(i,map_e);
 			}
 			break;
 		case 4:
 
-        		for (map<int,Emp>::iterator it=map_e.begin(); it != map_e.end(); it++)
+        		for (map<int,Emp*>::iterator it=map_e.begin(); it != map_e.end(); it++)
                         
                         {
-                                 cout <<"ID="<< it->first<<"\n"<<"name= "<< it->second.getname()<<"\n"<<"worktype="<<it->second.getworkmode()<<"\n"<<"salary="<<it->second.getsal()<<endl;
+                                 cout <<"ID="<< it->first<<"\n"<<"name= "<< (it->second)->getname()<<"\n"<<"worktype="<<(it->second)->getworkmode()<<"\n"<<"salary="<<(it->second)->getsal()<<endl;
 
 
 			}
@@ -106,8 +109,9 @@ int main()
 			exit(1);
 		default:
 			cout<<"wrong choice"<<endl;
-	}
-	delete E;
+		}	
+//	delete E;
+//	delete D;
 	}
 return 0;
 }
