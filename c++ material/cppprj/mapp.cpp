@@ -6,117 +6,120 @@ class Emp
 	public:
 	int id;
 	char name;
-	map<string id,string> map_1;
 	private:
 	char type;
 	float sal;
 	public:
-void create(string id,string name)
+	map<int,std::string> map_1;
+void create(int id,string name)
 {
- map_1.insert(pair<string,string>(id  ,name));	
- map_1.insert(pair<string,string>( ,name));	
+ map_1.insert(pair<int,string>(id  ,name));	
+
 }
 
 void print()
 {
-	 for(map<string,string>::iterator it = map_1.begin();it != map_1.end();it++)
-	 cout<<it->first<<"->"<<it->second<<endl;
+	 for(map<int,string>::iterator it = map_1.begin();it != map_1.end();it++)
+{
+	cout<<it->first<<"->"<<it->second<<endl;
 }
-int cont(string id)
+}
+int cont(int id)
 {
     map_1.count(id);
 }
-int fnd(string id)
+int fnd(int id)
 {
-  
-	map_1.find(id)->second;
-      	cout<<map_1[id]<<endl;
+  map_1.find(id);
 }
-void erse(string id)
+void erse(int id)
 {
     map_1.erase(id);
 }  
-  void prt(string id)
+  void prt(int d)
   {
-     cout<<map_1[id]<<endl;
+      map_1[d];
   }
-void mod(string id,string name)
-{
- map_1[id]=name;
-}
-
 };
 int main()
 {
+//map<int,std::string> map_1;
 	Emp e;
-	int choice;
-	string name,id,type,sal;
-	char c;
+     int choice, id;
+     char name;
+
     while (1)
 
     {
 
-        cout<<"1.Insert Id and name"<<endl;
-        cout<<"2.Modify Id"<<endl;
-	cout<<"3.Find name of given Id "<<endl;
-        cout<<"4.Delete the Id"<<endl;
-        cout<<"5.Print the Name at a specific Id"<<endl;
-        cout<<"6.Print all Id"<<endl;
-        cout<<"7.Exit"<<endl;
-	cout<<"Enter your Choice: "<<endl;
+        cout<<"1.Insert Element into the Map"<<endl;
+
+        cout<<"2.Modify Element of the Map"<<endl;
+
+	    cout<<"3.Find Element at a key in Map"<<endl;
+
+        cout<<"4.Delete the data"<<endl;
+
+        cout<<"5.Print the Elements at a specific key"<<endl;
+
+        cout<<"6.Print all elements"<<endl;
+
+        cout<<"Enter your Choice: ";
+
         cin>>choice;
 
         switch(choice)
         {
         case 1:
-	do
-	{
+
             cout<<"Enter id and name to be inserted: ";
             cin>>id>>name;
-	    e.create(id,name);
-	    cout<<"do you need to enter again[y/n]"<<endl;
-	    cin>>c;
-	}while(c=='y');
-    	break;
-	case 2:
-
-	    cout<<"Enter the Id to modify"<<endl;
-	    cin>>id;
-	    cout<<"Enter the data"<<endl;
-	    cin>>name;
-	    e.mod(id,name);
-		break;
-
-        case 3:
-
-	    cout<<"Enter the Id at which name  to be found: ";
-            cin>>id;
-            if (e.cont(id) != 0)
-                e.fnd(id);
-            else
-                cout<<"No Element Found"<<endl;
+	        e.create(id,&name);
             break;
 
-    	case 4:
+        
+
+      case 3:
+
+	    cout<<"Enter the Id at which name  to be found: ";
+
+            cin>>id;
+
+            if (e.cont(id) != 0)
+
+                cout<<e.fnd(id).second<<endl;
+
+            else
+
+                cout<<"No Element Found"<<endl;
+
+            break;
+    case 4:
 
             cout<<"Enter the id to be deleted: ";
+
             cin>>id;
-            e.erse(id);
-	    cout<<"Entered  id is erased"<<endl;
-	    break;
-
-    	case 5:
-
-        cout<<"Enter the ID to print specific ";
+            cout<<e.erse(id)<<endl;
+            break;
+    case 5:
+        cout<<"Enter the ID to print specific id";
         cin>>id;
-        e.prt(id);
+        cout<<e.prt(id)<<endl;
         break;
 
         case 6:
 
-	    cout<<"Displaying all values: "<<endl;
-    	    e.print();
-	    break;
+	    cout<<"Displaying all values: ";
+
+           /* for (map<int,string>::iterator it = map_1.begin(); it != map_1.end(); it++)
+
+            {
+
+                cout << (*it).first << ": " << (*it).second << endl;
+
+            }*/e.print();
+
+            break;
 
       	case 7:
 
@@ -132,7 +135,6 @@ int main()
 
 
     }
-	    
 
 return 0;
 }
