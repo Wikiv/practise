@@ -174,7 +174,7 @@ int main()
 				itp=map_p.find(i);
 				if(itp!=map_p.end())
 			{
-				
+				map_p.erase(i);
 				cout<<"enter the id,name,dept,salary,exp,position"<<endl;
 			        cin>>i>>nn>>dd>>saa>>ee>>pp;
                         	Permanent *p=new Permanent(nn,dd,saa,ee,pp);
@@ -189,16 +189,29 @@ int main()
 			itc=map_c.find(i);
 			if(itc!=map_c.end())
 			{
-				 cout <<"ID="<< itc->first<<"\n"<<"name= "<< (itc->second)->getname()<<"\n"<<"dept="<<(itc->second)->getdept()<<"\n"<<"salary="<<(itc->second)->getsal()<<"\n"<<"contract period= "<< (itc->second)->getcon_p()<<"\n"<<"position= "<< (itc->second)->getposition()<<"\n";
 				map_c.erase(i);
+				cout <<"ID="<< itc->first<<"\n"<<"name= "<< (itc->second)->getname()<<"\n"<<"dept="<<(itc->second)->getdept()<<"\n"<<"salary="<<(itc->second)->getsal()<<"\n"<<"contract period= "<< (itc->second)->getcon_p()<<"\n"<<"position= "<< (itc->second)->getposition()<<"\n";
+				cout<<"enter the id,name,dept,sal,position,year"<<endl;
+                                cin>>i>>nn>>dd>>saa>>pp>>ee;
+                                contract *co=new contract(nn,dd,saa,pp,ee);
+				cout<<"size bef insert"<<map_c.size()<<endl;
+                                map_c.insert(pair<int,contract*>(i,co));
+				cout <<"ID="<< itc->first<<"\n"<<"name= "<< (itc->second)->getname()<<"\n"<<"dept="<<(itc->second)->getdept()<<"\n"<<"salary="<<(itc->second)->getsal()<<"\n"<<"contract period= "<< (itc->second)->getcon_p()<<"\n"<<"position= "<< (itc->second)->getposition()<<"\n";
 			}
 			else
 			{
 			map<int,worker*>::iterator itw=map_w.begin();
                         if(itw!=map_w.find(i))
 			{
-				cout <<"ID="<< itw->first<<"\n"<<"name= "<< (itw->second)->getname()<<"\n"<<"dept="<<(itw->second)->getdept()<<"\n"<<"salary="<<(itw->second)->getsal()<<"\n"<<"con_p= "<< (itw->second)->getcon_p()<<"\n"<<"shift= "<< (itw->second)->getshift()<<"\n";
-				map_w.erase(i);
+					cout <<"ID="<< itw->first<<"\n"<<"name= "<< (itw->second)->getname()<<"\n"<<"dept="<<(itw->second)->getdept()<<"\n"<<"salary="<<(itw->second)->getsal()<<"\n"<<"con_p= "<< (itw->second)->getcon_p()<<"\n"<<"shift= "<< (itw->second)->getshift()<<"\n";
+					map_w.erase(i);
+					cout<<"enter the id,name,dept,sal,year,shift"<<endl;
+                                        cin>>i>>nn>>dd>>saa>>ee>>shs;
+                                        worker *w=new worker(nn,dd,saa,ee,shs);
+                                	cout<<"size bef insert"<<map_w.size()<<endl;
+                                        map_w.insert(pair<int,worker*>(i,w));
+                                        cout<<"size after insert"<<map_w.size()<<endl;
+					cout <<"ID="<< itw->first<<"\n"<<"name= "<< (itw->second)->getname()<<"\n"<<"dept="<<(itw->second)->getdept()<<"\n"<<"salary="<<(itw->second)->getsal()<<"\n"<<"con_p= "<< (itw->second)->getcon_p()<<"\n"<<"shift= "<< (itw->second)->getshift()<<"\n";
 			}
 			else
 				cout<<"id not found"<<endl;
@@ -225,7 +238,7 @@ int main()
 		case 3:
 
                         {
-                                cout<<"enter to del"<<endl;
+                                cout<<"enter to id del"<<endl;
                         cin>>i;
 			map<int,Permanent*>::iterator itp=map_p.begin();
 			itp=map_p.find(i);
