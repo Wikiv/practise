@@ -94,6 +94,33 @@ void del(int j,map<int,Permanent*> map_p)
                 cout <<"ID="<< itp->first<<"\n"<<"name= "<< (itp->second)->getname()<<"\n"<<"exp="<<(itp->second)->getexp()<<"\n"<<"salary="<<(itp->second)->getsal()<<"\n"<<"exp= "<< (itp->second)->getexp()<<"\n"<<"position= "<< (itp->second)->getposition()<<"\n";
 		 
 	}
+	void per_in(int i,string n,string d,string sa,string e,string pp)
+	{
+		
+		 map<int,Permanent*>map_p;
+	Permanent *p=new Permanent(n,d,sa,e,pp);
+        cout<<"size bef insert"<<map_p.size()<<endl;
+        map_p.insert(pair<int,Permanent*>(i,p));	
+	}
+	void con_in(int i,string nn, string dd,string saa,string pp,string ee )
+	{
+ 		
+ 		map<int,contract*>map_c;
+		contract *co=new contract(nn,dd,saa,pp,ee);
+		cout<<"size bef insert"<<map_c.size()<<endl;
+                map_c.insert(pair<int,contract*>(i,co));
+		cout<<"size after insert"<<map_c.size()<<endl;
+	
+	}
+	void wor_in(int i,string nn,string dd,string saa,string ee,string shs )
+	{
+		
+		map<int,worker*>map_w;
+		worker *w=new worker(nn,dd,saa,ee,shs);
+                cout<<"size bef insert"<<map_w.size()<<endl;
+                map_w.insert(pair<int,worker*>(i,w));
+		cout<<"size after insert"<<map_w.size()<<endl;
+	}
                 	
 int main()
 {
@@ -103,18 +130,15 @@ int main()
         map<int,Permanent*>map_p;
 	map<int,contract*>map_c;
 	map<int,worker*>map_w;
-	Permanent *p;
-        contract *co;
-	worker *w;
-	while(1)
+while(1)
         {
-        cout<<"1.Insert details"<<endl;
-        cout<<"2.Modify details"<<endl;
-        cout<<"3..Delete the details"<<endl;
-        cout<<"4.Print all details"<<endl;
-        cout<<"5.Exit"<<endl;
-        cout<<"Enter your Choice: "<<endl;
-        cin>>choice;
+		cout<<"1.Insert details"<<endl;
+		cout<<"2.Modify details"<<endl;
+		cout<<"3..Delete the details"<<endl;
+		cout<<"4.Print all details"<<endl;
+		cout<<"5.Exit"<<endl;
+		cout<<"Enter your Choice: "<<endl;
+		cin>>choice;
 
                 switch(choice)
 
@@ -131,30 +155,22 @@ int main()
 						{
 							cout<<"enter the id,name,dept,salary,exp,position"<<endl;
 			                  		cin>>i>>nn>>dd>>saa>>ee>>pp;
-                        	        		Permanent *p=new Permanent(nn,dd,saa,ee,pp);
-                                			cout<<"size bef insert"<<map_p.size()<<endl;
-                                			map_p.insert(pair<int,Permanent*>(i,p));
-                                			cout<<"size after insert"<<map_p.size()<<endl;
+                        	        		 per_in(i,nn,dd,saa,ee,pp);
 						}		
 						break;
 					case 2:
 							{
 								cout<<"enter the id,name,dept,sal,position,year"<<endl;
                                                 		cin>>i>>nn>>dd>>saa>>pp>>ee;
-                                				contract *co=new contract(nn,dd,saa,pp,ee);
-								cout<<"size bef insert"<<map_c.size()<<endl;
-                                                		map_c.insert(pair<int,contract*>(i,co));
-								cout<<"size after insert"<<map_c.size()<<endl;
+                                				con_in(i,nn,dd,saa,pp,ee);
 							}
 							break;
 					case 3:
 							{
 							       	cout<<"enter the id,name,dept,sal,year,shift"<<endl;
                                                 		cin>>i>>nn>>dd>>saa>>ee>>shs;
-                                                 		worker *w=new worker(nn,dd,saa,ee,shs);
-                                               			cout<<"size bef insert"<<map_w.size()<<endl;
-                                                 		map_w.insert(pair<int,worker*>(i,w));
-                                                 		cout<<"size after insert"<<map_w.size()<<endl;
+                                                 		wor_in(i,nn,dd,saa,ee,shs);
+                                                 		
 							}
 							break;
 				}
@@ -177,9 +193,7 @@ int main()
 				map_p.erase(i);
 				cout<<"enter the id,name,dept,salary,exp,position"<<endl;
 			        cin>>i>>nn>>dd>>saa>>ee>>pp;
-                        	Permanent *p=new Permanent(nn,dd,saa,ee,pp);
-                                cout<<"size bef insert"<<map_p.size()<<endl;
-                                map_p.insert(pair<int,Permanent*>(i,p));
+                        	 per_in(i,nn,dd,saa,ee,pp);
 				cout <<"ID="<< itp->first<<"\n"<<"name= "<< (itp->second)->getname()<<"\n"<<"dept="<<(itp->second)->getdept()<<"\n"<<"salary="<<(itp->second)->getsal()<<"\n"<<"exp= "<< (itp->second)->getexp()<<"\n"<<"position= "<< (itp->second)->getposition()<<"\n";
 				
 			}
@@ -220,20 +234,6 @@ int main()
 			cout<<"id deleted"<<endl;
                         }
                         break;
-
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
-		
 		
 		case 3:
 
@@ -302,9 +302,6 @@ int main()
                 default:
                         cout<<"wrong choice"<<endl;
                 }
-
-        }
-return 0;
-}
-
-
+		}			
+	return 0;
+		}
