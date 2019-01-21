@@ -1,4 +1,4 @@
-#include<iostream>
+ZZ#include<iostream>
 #include<string.h>
 #include<map>
 using namespace std;
@@ -57,7 +57,7 @@ int main()
 		switch(choice)
 		{
 	
-		case 1:
+		case 2:
 			
 			do{
 

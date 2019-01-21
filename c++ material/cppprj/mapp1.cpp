@@ -68,11 +68,15 @@ int main()
 			 
 		}	while(c=='y');
 		 
-	}
+	}		cout<<"del"<<endl;
 			map<int,Emp>::iterator it = map_m.begin();
+			cin>>i;
+			it=map_m.find(i);
+			map_m.erase(it);
 			for (; it != map_m.end(); it++)
 			{
 				 cout <<"ID="<< it->first<<"\n"<<"name= "<< it->second.getname()<<"\n"<<"worktype= "<<it->second.gettype()<<"\n"<<"salary= "<<it->second.getsal()<<endl;
+			
 			}
 
 	 }

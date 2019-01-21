@@ -1,39 +1,5 @@
+#include"empinh.h"
 #include<iostream>
-
-map<int,Permanent*>map_p;
-	map<int,contract*>map_c;
-	map<int,worker*>map_w;
-void del(int j,map<int,Permanent*> map_p)
-        {
-		map<int,Permanent*>::iterator itp=map_p.begin();
-                cout <<"ID="<< itp->first<<"\n"<<"name= "<< (itp->second)->getname()<<"\n"<<"exp="<<(itp->second)->getexp()<<"\n"<<"salary="<<(itp->second)->getsal()<<"\n"<<"exp= "<< (itp->second)->getexp()<<"\n"<<"position= "<< (itp->second)->getposition()<<"\n";
-		 
-	}
-	void per_in(int i,string n,string d,string sa,string e,string pp)
-	{
-		
-		 map<int,Permanent*>map_p;
-	Permanent *p=new Permanent(n,d,sa,e,pp);
-        map_p.insert(pair<int,Permanent*>(i,p));	
-	}
-	void con_in(int i,string nn, string dd,string saa,string pp,string ee )
-	{
- 		
- 		map<int,contract*>map_c;
-		contract *co=new contract(nn,dd,saa,pp,ee);
-		map_c.insert(pair<int,contract*>(i,co));
-		
-	
-	}
-	void wor_in(int i,string nn,string dd,string saa,string ee,string shs )
-	{
-		
-		map<int,worker*>map_w;
-		worker *w=new worker(nn,dd,saa,ee,shs);
-                map_w.insert(pair<int,worker*>(i,w));
-		
-	}
-                	
 int main()
 {
         string nn,ee,rr,pp,saa,shs,dd;
@@ -183,9 +149,14 @@ while(1)
                         switch(choice)
 		{
 				case 1:
-				for (map<int,Permanent*>::iterator itp=map_p.begin(); itp != map_p.end(); itp++)                    
+                {
+                cout<<"1.permanent";
+                map<int,Permanent*>::iterator itp=map_p.begin();
+				for (; itp != map_p.end(); itp++)
+                itp->second->print();                    
 				cout <<"ID="<< itp->first<<"\n"<<"name= "<< (itp->second)->getname()<<"\n"<<"dept="<<(itp->second)->getdept()<<"\n"<<"salary="<<(itp->second)->getsal()<<"\n"<<"exp= "<< (itp->second)->getexp()<<"\n"<<"position= "<< (itp->second)->getposition()<<"\n";
-                        	break;
+                }
+                            break;
 				case 2:
 				for (map<int,contract*>::iterator itc=map_c.begin(); itc != map_c.end(); itc++)
                 {
