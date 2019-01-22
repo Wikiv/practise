@@ -69,18 +69,21 @@ class S
 			int i=0;
 			for(;str[i];i++)
 			{
-				result[i]=&this->str;
-				//cout<<"res-"<<result<<endl;
+				result[i]=(S*)malloc(sizeof(S));
+				result[i]->str=(char *)malloc(sizeof(1));
+				*result[i]->str=str[i];
+				cout<<result[i]->str;
 				//result++;
 				if(str[i]==*p)
 					str[i]=' ';
 				else
 				continue;
 			}
-			cout<<"strbrk="<<str<<endl;
+			cout<<endl<<"strbrk="<<str<<endl;
+			//cout<<"res-"<<result->str<<endl;
 			
 		}
-		S S::operator=(S*result[])
+		
 
 
 int main()
