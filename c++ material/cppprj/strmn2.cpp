@@ -66,21 +66,27 @@ class S
 		}
 		void S::brk(char*p,S *result[10])
 		{
-			int i=0;
+			int i=0,count=0;
 			for(;str[i];i++)
 			{
+				if(str[i]==*p)
+				{
+					str[i];
+					
+				}
+				else
+				{
 				result[i]=(S*)malloc(sizeof(S));
 				result[i]->str=(char *)malloc(sizeof(1));
 				*result[i]->str=str[i];
 				cout<<result[i]->str;
-				//result++;
-				if(str[i]==*p)
-					str[i]=' ';
-				else
-				continue;
+				
+				count++;
+				}
 			}
 			cout<<endl<<"strbrk="<<str<<endl;
-			//cout<<"res-"<<result->str<<endl;
+			cout<<"cout-"<<count<<endl;
+			
 			
 		}
 		
